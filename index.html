@@ -45,11 +45,6 @@
             text-align: center;
             margin-top: 20px;
         }
-        iframe {
-            width: 80%; /* Ajusta a largura do vídeo */
-            max-width: 800px; /* Limita a largura máxima */
-            height: 450px; /* Ajuste a altura do vídeo */
-        }
         .btn-whatsapp {
             display: inline-block;
             background-color: #25d366;
@@ -92,6 +87,13 @@
             cursor: pointer;
             border-radius: 4px;
         }
+        /* Estilo para a imagem fixa no fundo */
+        section {
+            background-image: url('https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/Inteligencia-Artificial-na-seguranca-do-trabalho.jpg?raw=true');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
     </style>
 </head>
 <body>
@@ -99,9 +101,10 @@
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
         <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
-        <a href="normas.html"><i class="fas fa-gavel"></i> Normas Regulamentadoras</a>
+        <a href="normas.html"><i class="fas fa-book"></i> Normas Regulamentadoras</a>
         <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
     </nav>
+
     <header>
         <h1>Segurança do Trabalho com Eliézer</h1>
         <p>Orientação e segurança para empresas e trabalhadores</p>
@@ -115,5 +118,44 @@
         <br>
         <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
     </header>
+
+    <!-- Formulário de Contato -->
+    <section id="formulario-contato" style="padding: 20px; background-color: #f4f4f4; margin-top: 20px;">
+        <h2>Entre em contato</h2>
+        <form name="contato" method="POST" data-netlify="true">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Seção de Normas Regulamentadoras -->
+    <section id="normas-regulamentadoras" style="padding: 20px; background-color: #f4f4f4;">
+        <h2>Normas Regulamentadoras</h2>
+        <p>As principais normas para segurança do trabalho são...</p>
+    </section>
+
+    <!-- Seção de Documentos Essenciais -->
+    <section id="documentos-essenciais" style="padding: 20px; background-color: #f4f4f4;">
+        <h2>Documentos Essenciais</h2>
+        <p>Os principais documentos para garantir a segurança no trabalho incluem...</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
+    </footer>
 </body>
 </html>
