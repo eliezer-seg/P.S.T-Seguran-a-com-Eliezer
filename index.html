@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orientações práticas e educativas sobre segurança do trabalho com Eliézer.">
-    <title>Segurança do Trabalho com Eliézer</title>
+    <title>Documentos Essenciais - Segurança do Trabalho com Eliézer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
         body {
@@ -12,13 +12,14 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
-            background: url('https://raw.githubusercontent.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/refs/heads/main/imagens/istockphoto-1732837512-2048x2048.webp') no-repeat center center/cover;
+            background-color: #004d40;
             color: white;
+            padding: 20px;
             text-align: center;
-            padding: 50px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         nav {
             background-color: #00796b;
             padding: 10px;
@@ -27,46 +28,41 @@
             top: 0;
             z-index: 100;
         }
+
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 20px;
             font-size: 18px;
         }
-        nav a i {
-            margin-right: 8px;
-        }
-        .content {
+
+        .documentos-section {
+            padding: 30px;
             text-align: center;
-            padding: 20px;
         }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
+
+        .documentos-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .documentos-list li {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .documentos-artigo {
+            padding: 30px;
+            text-align: left;
             margin-top: 20px;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+
+        .documentos-artigo h4 {
+            font-size: 20px;
+            color: #00796b;
         }
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
+
         footer {
             background-color: #263238;
             color: white;
@@ -74,48 +70,59 @@
             padding: 10px;
             margin-top: 30px;
         }
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input, textarea {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #00796b;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
-        }
     </style>
 </head>
 <body>
+
+    <!-- Barra de navegação -->
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
         <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
+        <a href="normas.html"><i class="fas fa-gavel"></i> Normas Regulamentadoras</a>
+        <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
     </nav>
-    <header>
-        <h1>Segurança do Trabalho com Eliézer</h1>
-        <p>Orientação e segurança para empresas e trabalhadores</p>
-        <h1>Bem-vindo ao site P.S.T - PROTEÇÃO E SAÚDE NO TRABALHO</h1>
-        <h2>Bem-Vindo!</h2>
-        <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro, saudável e dentro das normas.</p>
-        <p>Assista ao vídeo introdutório:</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <br>
-        <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
-    </header><!-- Formulário de Contato -->
-<section id="formulario-contato" style="padding: 20px;
+
+    <!-- Lista de Documentos Essenciais -->
+    <section class="documentos-section">
+        <h2>Documentos Essenciais para Segurança do Trabalho</h2>
+        <ul class="documentos-list">
+            <li><strong>PPRA:</strong> Programa de Prevenção de Riscos Ambientais</li>
+            <li><strong>PGR:</strong> Programa de Gestão de Riscos</li>
+            <li><strong>PCMSO:</strong> Programa de Controle Médico de Saúde Ocupacional</li>
+            <li><strong>Laudo Técnico de Condições Ambientais de Trabalho (LTCAT)</strong></li>
+            <li><strong>CIPA:</strong> Comissões Internas de Prevenção de Acidentes</li>
+            <li><strong>NRs (Normas Regulamentadoras):</strong> Documentação exigida conforme as Normas</li>
+        </ul>
+    </section>
+
+    <!-- Artigo sobre os Documentos Essenciais -->
+    <section class="documentos-artigo">
+        <h3>Principais Documentos Essenciais para Segurança do Trabalho</h3>
+        <p>Abaixo estão alguns dos documentos essenciais para garantir a segurança e a saúde no ambiente de trabalho, conforme exigido pelas normas brasileiras de segurança. Cada um desses documentos tem um papel específico para assegurar a integridade dos trabalhadores e o cumprimento das obrigações legais das empresas.</p>
+
+        <h4>1. PPRA (Programa de Prevenção de Riscos Ambientais)</h4>
+        <p>O PPRA é um programa exigido pela NR-9 que visa identificar, avaliar e controlar os riscos ambientais no local de trabalho. O objetivo é antecipar, reconhecer, avaliar e controlar os riscos ambientais que possam afetar a saúde e a segurança dos trabalhadores.</p>
+
+        <h4>2. PGR (Programa de Gestão de Riscos)</h4>
+        <p>O PGR é um documento que integra todas as ações de prevenção de riscos e segurança, sendo um planejamento sistemático de gestão de segurança do trabalho.</p>
+
+        <h4>3. PCMSO (Programa de Controle Médico de Saúde Ocupacional)</h4>
+        <p>O PCMSO visa monitorar a saúde dos trabalhadores e prevenir doenças ocupacionais, garantindo um ambiente de trabalho saudável.</p>
+
+        <h4>4. LTCAT (Laudo Técnico de Condições Ambientais de Trabalho)</h4>
+        <p>O LTCAT define as condições ambientais no local de trabalho, determinando os direitos de aposentadoria especial para os trabalhadores expostos a riscos.</p>
+
+        <h4>5. CIPA (Comissão Interna de Prevenção de Acidentes)</h4>
+        <p>A CIPA é composta por membros da empresa e dos trabalhadores com o objetivo de prevenir acidentes no ambiente de trabalho.</p>
+
+        <h4>6. NR-12 (Segurança no Trabalho em Máquinas e Equipamentos)</h4>
+        <p>A NR-12 regula o uso de máquinas e equipamentos, garantindo a segurança dos trabalhadores ao operar esses aparelhos.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
+    </footer>
+
+</body>
+</html>
