@@ -124,18 +124,40 @@
             <p>Email: <strong>eliezer.fernandes92@gmail.com</strong></p>
 
             <!-- Formulário de Contato -->
-            <form action="https://hooks.zapier.com/hooks/catch/22272966/2c6eq6j/" method="POST">
-                <label>Nome:</label>
-                <input type="text" name="nome" required>
-                
-                <label>Email:</label>
-                <input type="email" name="email" required>
-                
-                <label>Mensagem:</label>
-                <textarea name="mensagem" required></textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
+            <form id="contatoForm">
+    <label>Nome:</label>
+    <input type="text" name="nome" required>
+
+    <label>Email:</label>
+    <input type="email" name="email" required>
+
+    <label>Mensagem:</label>
+    <textarea name="mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+<p id="mensagemConfirmacao" style="color: green; display: none; font-weight: bold; margin-top: 10px;">
+    Obrigado! Sua mensagem foi enviada com sucesso. Em breve entrarei em contato.
+</p>
+
+<script>
+    document.getElementById("contatoForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+        const dados = new FormData(form);
+
+        await fetch("https://hooks.zapier.com/hooks/catch/22272966/2c6eq6j/", {
+            method: "POST",
+            body: dados,
+        });
+
+        form.reset();
+        document.getElementById("mensagemConfirmacao").style.display = "block";
+    });
+</script>
+
 
         </div>
 
