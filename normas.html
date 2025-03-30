@@ -1,106 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Normas Regulamentadoras - Segurança do Trabalho</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    nav {
-      background-color: #00796b;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 20px;
-      font-size: 18px;
-    }
-    nav a i {
-      margin-right: 8px;
-    }
-    header {
-      background-color: #004d40;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .container {
-      display: flex;
-      flex-direction: row-reverse;
-      padding: 20px;
-      gap: 20px;
-    }
-    .normas-lista {
-      width: 30%;
-    }
-    .normas-lista button {
-      display: block;
-      width: 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-align: left;
-    }
-    .normas-lista button:hover {
-      background-color: #004d40;
-    }
-    .descricao {
-      width: 70%;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normas Regulamentadoras - Segurança do Trabalho com Eliézer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        nav {
+            background-color: #00796b;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        header {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+        }
+
+        .menu-normas {
+            width: 35%;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .menu-normas button {
+            display: block;
+            width: 100%;
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 12px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            text-align: left;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .menu-normas button:hover {
+            background-color: #004d40;
+        }
+
+        .descricao-norma {
+            flex: 1;
+            margin-left: 20px;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-family: 'Times New Roman', serif;
+        }
+
+        .descricao-norma h3 {
+            color: #c62828;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #263238;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <a href="index.html"><i class="fas fa-home"></i> Início</a>
-    <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
-    <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
-    <a href="normas.html"><i class="fas fa-book"></i> Normas</a>
-  </nav>
 
-  <header>
-    <h1>Normas Regulamentadoras</h1>
-    <p>Conheça as principais normas que garantem a segurança e saúde do trabalhador.</p>
-  </header>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> Início</a>
+        <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
+        <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
+        <a href="normas.html"><i class="fas fa-gavel"></i> Normas</a>
+    </nav>
 
-  <div class="container">
-    <div class="normas-lista">
-      <button onclick="mostrarDescricao('nr6')">NR 6 - Equipamentos de Proteção Individual</button>
-      <button onclick="mostrarDescricao('nr9')">NR 9 - Programas de Prevenção de Riscos Ambientais</button>
-      <button onclick="mostrarDescricao('nr12')">NR 12 - Segurança no Trabalho em Máquinas e Equipamentos</button>
-      <button onclick="mostrarDescricao('nr17')">NR 17 - Ergonomia</button>
+    <header>
+        <h1>Normas Regulamentadoras</h1>
+        <p>Selecione uma norma para ver sua descrição</p>
+    </header>
+
+    <div class="container">
+        <div class="menu-normas">
+            <button onclick="mostrarDescricao('nr1')">NR 1 - Disposições Gerais ></button>
+            <button onclick="mostrarDescricao('nr6')">NR 6 - Equipamentos de Proteção Individual ></button>
+            <button onclick="mostrarDescricao('nr9')">NR 9 - Programa de Prevenção de Riscos Ambientais ></button>
+            <button onclick="mostrarDescricao('nr10')">NR 10 - Segurança em Instalações Elétricas ></button>
+            <button onclick="mostrarDescricao('nr11')">NR 11 - Transporte, Movimentação, Armazenagem e Manuseio de Materiais ></button>
+            <button onclick="mostrarDescricao('nr12')">NR 12 - Máquinas e Equipamentos ></button>
+            <button onclick="mostrarDescricao('nr15')">NR 15 - Atividades e Operações Insalubres ></button>
+            <button onclick="mostrarDescricao('nr18')">NR 18 - Construção Civil ></button>
+        </div>
+
+        <div class="descricao-norma" id="descricao">
+            <h3>Bem-vindo!</h3>
+            <p>Selecione uma norma à direita para visualizar sua descrição detalhada.</p>
+        </div>
     </div>
-    <div class="descricao" id="descricao">
-      <p>Selecione uma norma para ver sua descrição.</p>
-    </div>
-  </div>
 
-  <script>
-    function mostrarDescricao(norma) {
-      const descricoes = {
-        nr6: "A NR 6 trata sobre os Equipamentos de Proteção Individual (EPI), definindo obrigações do empregador quanto à oferta, treinamento e uso correto pelos trabalhadores.",
-        nr9: "A NR 9 estabelece o Programa de Prevenção de Riscos Ambientais (PPRA), que visa preservar a saúde e integridade dos trabalhadores através da antecipação, reconhecimento e controle de riscos.",
-        nr12: "A NR 12 define medidas de segurança para o trabalho com máquinas e equipamentos, assegurando que sejam seguros desde a sua fabricação até a operação.",
-        nr17: "A NR 17 estabelece parâmetros que permitam a adaptação das condições de trabalho às características psicofisiológicas dos trabalhadores, promovendo o conforto, segurança e desempenho eficiente."
-      };
+    <footer>
+        <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
+    </footer>
 
-      document.getElementById("descricao").innerHTML = `<p>${descricoes[norma]}</p>`;
-    }
-  </script>
+    <script>
+        const descricoes = {
+            nr1: "Estabelece as disposições gerais e o campo de aplicação das Normas Regulamentadoras relacionadas à segurança e saúde no trabalho.",
+            nr6: "Trata dos Equipamentos de Proteção Individual (EPIs), sua obrigatoriedade, fornecimento e uso adequado pelo trabalhador.",
+            nr9: "Institui o Programa de Prevenção de Riscos Ambientais, visando à preservação da saúde e integridade dos trabalhadores.",
+            nr10: "Garante a segurança em instalações e serviços com eletricidade, prevenindo acidentes e garantindo condições seguras.",
+            nr11: "Norma sobre transporte, movimentação, armazenagem e manuseio de materiais, promovendo segurança nessas atividades.",
+            nr12: "Estabelece medidas de segurança para o trabalho com máquinas e equipamentos, prevenindo acidentes.",
+            nr15: "Define atividades e operações insalubres, com critérios para caracterização e concessão de adicionais de insalubridade.",
+            nr18: "Foca nas condições e meio ambiente de trabalho na indústria da construção, com medidas de controle e sistemas preventivos."
+        };
+
+        function mostrarDescricao(norma) {
+            const titulo = document.querySelector("#descricao h3");
+            const texto = document.querySelector("#descricao p");
+
+            titulo.textContent = document.querySelector(`[onclick="mostrarDescricao('${norma}')"]`).textContent;
+            texto.textContent = descricoes[norma];
+        }
+    </script>
+
 </body>
 </html>
