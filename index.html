@@ -24,14 +24,11 @@
             background-color: #00796b;
             padding: 10px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
         }
         nav a i {
@@ -62,6 +59,47 @@
         .btn-whatsapp:hover {
             background-color: #128c7e;
         }
+        .publicacoes {
+            text-align: center;
+            background: linear-gradient(135deg, #1e88e5, #42a5f5);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+        }
+        .publicacoes h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .publicacao {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .publicacao img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .publicacao h3 {
+            color: #00796b;
+        }
+        .btn-leia-mais {
+            display: inline-block;
+            background-color: #00796b;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .btn-leia-mais:hover {
+            background-color: #005f56;
+        }
         footer {
             background-color: #263238;
             color: white;
@@ -69,43 +107,10 @@
             padding: 10px;
             margin-top: 30px;
         }
-        .publicacoes {
-            text-align: center;
-            padding: 30px;
-            background-color: #fff;
-            margin-top: 20px;
-        }
-        .publicacao {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #e3f2fd;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .publicacao h3 {
-            color: #00796b;
-        }
-        .publicacao p {
-            color: #333;
-        }
-        .btn-leia-mais {
-            display: inline-block;
-            background-color: #00796b;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-            font-size: 14px;
-        }
-        .btn-leia-mais:hover {
-            background-color: #005a4f;
-        }
     </style>
 </head>
 <body>
+    
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
@@ -118,32 +123,40 @@
     <header>
         <h1>Segurança do Trabalho com Eliézer</h1>
         <p>Orientação e segurança para empresas e trabalhadores</p>
+        <h1>Bem-vindo ao site P.S.T - PROTEÇÃO E SAÚDE NO TRABALHO</h1>
         <h2>Bem-Vindo!</h2>
         <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro, saudável e dentro das normas.</p>
-        <p>Assista ao vídeo introdutório:</p>
+    </header>
+
+    <!-- Seção de Últimas Publicações -->
+    <section class="publicacoes">
+        <h2>📢 Fique por dentro das novidades!</h2>
+        <div class="publicacao">
+            <a href="publicacoes.html">
+                <img src="https://raw.githubusercontent.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/main/imagens/abril-verde.jpg" alt="Campanha Abril Verde">
+            </a>
+            <h3>Abril Verde: A Importância da Conscientização em Segurança do Trabalho</h3>
+            <p>O mês de abril é marcado por uma campanha fundamental para a prevenção de acidentes e doenças ocupacionais: o <strong>Abril Verde</strong>. Essa iniciativa tem como objetivo conscientizar trabalhadores, empresas e a sociedade sobre a necessidade de garantir ambientes de trabalho seguros e saudáveis.</p>
+            <a href="publicacoes.html" class="btn-leia-mais">Saiba mais</a>
+        </div>
+    </section>
+
+    <!-- Botão do WhatsApp -->
+    <div class="content">
+        <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
+    </div>
+
+    <!-- Vídeo introdutório -->
+    <div class="content">
+        <h2>Assista ao vídeo introdutório:</h2>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
         </div>
-        <br>
-        <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
-    </header>
-
-    <section class="publicacoes">
-        <h2>Últimas Publicações</h2>
-        <div class="publicacao">
-            <h3>Como evitar acidentes no trabalho</h3>
-            <p>Aprenda medidas preventivas para reduzir acidentes e garantir um ambiente seguro.</p>
-            <a class="btn-leia-mais" href="publicacoes.html">Leia mais</a>
-        </div>
-        <div class="publicacao">
-            <h3>Importância do uso correto de EPIs</h3>
-            <p>Veja como os Equipamentos de Proteção Individual podem salvar vidas e evitar problemas legais.</p>
-            <a class="btn-leia-mais" href="publicacoes.html">Leia mais</a>
-        </div>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
     </footer>
+
 </body>
 </html>
