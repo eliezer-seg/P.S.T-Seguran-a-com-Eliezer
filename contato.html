@@ -151,36 +151,45 @@
 
     <!-- Script para envio do formulário -->
     <script>
-        document.getElementById("contatoForm").addEventListener("submit", async function (e) {
-            e.preventDefault();
+        <script>
+    document.getElementById("contatoForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-            const form = e.target;
-            const dados = {
-                nome: form.nome.value,
-                email: form.email.value,
-                mensagem: form.mensagem.value
-            };
+        const form = e.target;
+        const dados = {
+            nome: form.nome.value,
+            email: form.email.value,
+            mensagem: form.mensagem.value
+        };
 
-            try {
-                const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(dados)
-                });
+        console.log("Dados enviados:", dados); // Verifica os dados antes do envio
 
-                if (resposta.ok) {
-                    form.reset();
-                    document.getElementById("mensagemConfirmacao").style.display = "block";
-                } else {
-                    alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
-                }
-            } catch (error) {
-                console.error("Erro:", error);
-                alert("Ocorreu um erro ao enviar sua mensagem.");
+        try {
+            const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(dados)
+            });
+
+            console.log("Resposta do servidor:", resposta); // Verifica a resposta do servidor
+
+            if (resposta.ok) {
+                console.log("Mensagem enviada com sucesso!");
+                form.reset();
+                document.getElementById("mensagemConfirmacao").style.display = "block";
+            } else {
+                console.error("Erro ao enviar mensagem. Status:", resposta.status);
+                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
             }
-        });
+        } catch (error) {
+            console.error("Erro na requisição:", error);
+            alert("Ocorreu um erro ao enviar sua mensagem.");
+        }
+    });
+</script>
+
     </script>
 
 </body>
