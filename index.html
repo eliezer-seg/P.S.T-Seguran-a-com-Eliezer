@@ -41,27 +41,6 @@
             text-align: center;
             padding: 20px;
         }
-        .video-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        iframe {
-            width: 80%;
-            max-width: 800px;
-            height: 450px;
-        }
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-        }
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
-        }
         .novidades-container {
             text-align: center;
             margin: 40px 0;
@@ -81,19 +60,44 @@
         }
         .publicacao-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             padding: 20px;
             text-align: left;
         }
-        .publicacao-container img {
-            width: 200px;
+        .insta-container {
+            text-align: center;
+            width: 40%;
+        }
+        .insta-container img {
+            width: 100%;
+            max-width: 300px;
             height: auto;
             border-radius: 10px;
-            margin-right: 20px;
+        }
+        .btn-instagram {
+            display: block;
+            background-color: #E1306C;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 10px auto;
+            width: 70%;
+        }
+        .btn-instagram:hover {
+            background-color: #C13584;
         }
         .publicacao-texto {
-            max-width: 500px;
+            max-width: 50%;
+        }
+        .publicacao-texto h2 {
+            font-size: 22px;
+        }
+        .publicacao-texto p {
+            font-size: 16px;
         }
         .btn-publicacoes {
             display: inline-block;
@@ -108,29 +112,14 @@
         .btn-publicacoes:hover {
             background-color: #004d40;
         }
-        .insta-container {
+        .video-container {
             text-align: center;
-            margin: 40px 0;
+            margin-top: 20px;
         }
-        .insta-container img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
-        }
-        .btn-instagram {
-            display: block;
-            background-color: #E1306C;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 10px auto;
-            width: 200px;
-        }
-        .btn-instagram:hover {
-            background-color: #C13584;
+        iframe {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
         }
         footer {
             background-color: #263238;
@@ -166,7 +155,15 @@
 
     <!-- Seção de Publicação -->
     <div class="publicacao-container">
-        <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/Inteligencia-Artificial-na-seguranca-do-trabalho.jpg?raw=true" alt="Publicação">
+        <!-- Imagem do Instagram -->
+        <div class="insta-container">
+            <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Siga no Instagram">
+            <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank">
+                <i class="fab fa-instagram"></i> Siga no Instagram
+            </a>
+        </div>
+
+        <!-- Publicação Abril Verde -->
         <div class="publicacao-texto">
             <h2>Abril Verde: Conscientização em Segurança do Trabalho</h2>
             <p>O mês de abril é dedicado à prevenção de acidentes e doenças ocupacionais. Descubra como a campanha Abril Verde pode contribuir para um ambiente de trabalho mais seguro.</p>
@@ -174,14 +171,7 @@
         </div>
     </div>
 
-    <!-- Botão Instagram -->
-    <div class="insta-container">
-        <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Siga no Instagram">
-        <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank">
-            <i class="fab fa-instagram"></i> Siga no Instagram
-        </a>
-    </div>
-
+    <!-- Vídeo -->
     <div class="video-container">
         <p>Assista ao vídeo introdutório:</p>
         <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
