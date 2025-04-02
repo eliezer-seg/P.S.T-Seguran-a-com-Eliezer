@@ -151,36 +151,39 @@
 
     <!-- Script para envio do formulário -->
     <script>
-    document.getElementById("contatoForm").addEventListener("submit", async function (e) {
-        e.preventDefault();
+        document.getElementById("contatoForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
 
-        const form = e.target;
-        const dados = new FormData(form);
+            const form = e.target;
+            const dados = {
+                nome: form.nome.value,
+                email: form.email.value,
+                mensagem: form.mensagem.value
+            };
 
-        console.log("Dados do formulário:", Object.fromEntries(dados.entries()));
+            try {
+                const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(dados)
+                });
 
-        try {
-            const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
-                method: "POST",
-                body: dados
-            });
-
-            console.log("Resposta do servidor:", resposta);
-
-            if (resposta.ok) {
-                console.log("Mensagem enviada com sucesso!");
-                form.reset();
-                document.getElementById("mensagemConfirmacao").style.display = "block";
-            } else {
-                console.error("Erro ao enviar a mensagem. Status:", resposta.status);
-                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+                if (resposta.ok) {
+                    form.reset();
+                    document.getElementById("mensagemConfirmacao").style.display = "block";
+                } else {
+                    alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+                }
+            } catch (error) {
+                console.error("Erro:", error);
+                alert("Ocorreu um erro ao enviar sua mensagem.");
             }
-        } catch (error) {
-            console.error("Erro ao conectar com o servidor:", error);
-            alert("Ocorreu um erro ao enviar sua mensagem.");
-        }
-    });
+        });
     </script>
 
 </body>
 </html>
+
+
