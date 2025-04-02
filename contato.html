@@ -125,40 +125,21 @@
 
             <!-- Formulário de Contato -->
             <form id="contatoForm">
-    <label>Nome:</label>
-    <input type="text" name="nome" required>
+                <label>Nome:</label>
+                <input type="text" name="nome" required>
 
-    <label>Email:</label>
-    <input type="email" name="email" required>
+                <label>Email:</label>
+                <input type="email" name="email" required>
 
-    <label>Mensagem:</label>
-    <textarea name="mensagem" required></textarea>
+                <label>Mensagem:</label>
+                <textarea name="mensagem" required></textarea>
 
-    <button type="submit">Enviar</button>
-</form>
+                <button type="submit">Enviar</button>
+            </form>
 
-<p id="mensagemConfirmacao" style="color: green; display: none; font-weight: bold; margin-top: 10px;">
-    Obrigado! Sua mensagem foi enviada com sucesso. Em breve entrarei em contato.
-</p>
-
-<script>
-    document.getElementById("contatoForm").addEventListener("submit", async function (e) {
-        e.preventDefault();
-
-        const form = e.target;
-        const dados = new FormData(form);
-
-        await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
-            method: "POST",
-            body: dados,
-        });
-
-        form.reset();
-        document.getElementById("mensagemConfirmacao").style.display = "block";
-    });
-</script>
-
-
+            <p id="mensagemConfirmacao" style="color: green; display: none; font-weight: bold; margin-top: 10px;">
+                Obrigado! Sua mensagem foi enviada com sucesso. Em breve entrarei em contato.
+            </p>
         </div>
 
         <a class="whatsapp-btn" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
@@ -167,6 +148,40 @@
     <footer>
         <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
     </footer>
+
+    <!-- Script para envio do formulário -->
+    <script>
+        document.getElementById("contatoForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const dados = {
+                nome: form.nome.value,
+                email: form.email.value,
+                mensagem: form.mensagem.value
+            };
+
+            try {
+                const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(dados)
+                });
+
+                if (resposta.ok) {
+                    form.reset();
+                    document.getElementById("mensagemConfirmacao").style.display = "block";
+                } else {
+                    alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+                }
+            } catch (error) {
+                console.error("Erro:", error);
+                alert("Ocorreu um erro ao enviar sua mensagem.");
+            }
+        });
+    </script>
 
 </body>
 </html>
