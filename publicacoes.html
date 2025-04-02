@@ -13,6 +13,13 @@
             background-color: #f4f4f4;
         }
 
+        header {
+            background-color: #004d40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
         nav {
             background-color: #00796b;
             padding: 10px;
@@ -25,28 +32,30 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
             font-size: 18px;
         }
 
-        .content {
-            text-align: center;
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
             padding: 20px;
-        }
-
-        .publicacoes {
-            background-color: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
+            background: white;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        .publicacao {
-            margin-bottom: 20px;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
+        h1, h2 {
+            color: #00796b;
+        }
+
+        p {
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         footer {
@@ -60,38 +69,21 @@
 </head>
 <body>
 
+    <!-- Barra de navegação -->
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
         <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
-        <a href="normas.html"><i class="fas fa-gavel"></i> Normas</a>
+        <a href="normas.html"><i class="fas fa-gavel"></i> Normas Regulamentadoras</a>
+        <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
         <a href="publicacoes.html"><i class="fas fa-newspaper"></i> Publicações</a>
     </nav>
 
-    <section class="content">
-        <h1>Publicações</h1>
-    </section>
+    <!-- Conteúdo da publicação -->
+    <div class="container">
+        <h1># Abril Verde: A Importância da Conscientização em Segurança do Trabalho</h1>
 
-    <section class="publicacoes">
-        <div class="publicacao">
-            <h3>Importância do uso de EPI</h3>
-            <p>O uso adequado de Equipamentos de Proteção Individual (EPI) é essencial para garantir a segurança dos trabalhadores...</p>
-        </div>
+        <p>O mês de abril é marcado por uma campanha fundamental para a prevenção de acidentes e doenças ocupacionais: o <strong>Abril Verde</strong>. Essa iniciativa tem como objetivo conscientizar trabalhadores, empresas e a sociedade sobre a necessidade de garantir ambientes de trabalho seguros e saudáveis.</p>
 
-        <div class="publicacao">
-            <h3>Segurança no trabalho em altura</h3>
-            <p>Trabalhos em altura exigem medidas específicas para evitar acidentes. Saiba quais são as principais normas e diretrizes...</p>
-        </div>
-
-        <div class="publicacao">
-            <h3>Prevenção de acidentes com máquinas</h3>
-            <p>Máquinas sem proteção adequada podem causar acidentes graves. Veja como garantir a segurança no trabalho...</p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
-    </footer>
-
-</body>
-</html>
+        <h2>Origem do Abril Verde</h2>
+        <p>A campanha Abril Verde surgiu inspirada no <strong>Dia Mundial da Segurança e Saúde no Trabalho</strong>, celebrado em <strong>28 de abril</strong>. A data foi escolhida pela Organização Internacional do Trabalho (OIT)
