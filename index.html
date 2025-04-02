@@ -24,6 +24,9 @@
             background-color: #00796b;
             padding: 10px;
             text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
         nav a {
             color: white;
@@ -59,46 +62,43 @@
         .btn-whatsapp:hover {
             background-color: #128c7e;
         }
-        .publicacoes {
-            text-align: center;
-            background: linear-gradient(135deg, #1e88e5, #42a5f5);
+        .insta-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .insta-container img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+        .btn-instagram {
+            display: inline-block;
+            background-color: #E1306C;
             color: white;
-            padding: 40px;
-            border-radius: 8px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
         }
-        .publicacoes h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .btn-instagram:hover {
+            background-color: #C13584;
         }
-        .publicacao {
-            background: white;
-            color: #333;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-        }
-        .publicacao img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .publicacao h3 {
-            color: #00796b;
-        }
-        .btn-leia-mais {
+        .btn-publicacoes {
             display: inline-block;
             background-color: #00796b;
             color: white;
-            padding: 10px 15px;
+            padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 10px;
+            font-size: 16px;
+            margin-top: 20px;
         }
-        .btn-leia-mais:hover {
-            background-color: #005f56;
+        .btn-publicacoes:hover {
+            background-color: #004d40;
         }
         footer {
             background-color: #263238;
@@ -110,7 +110,6 @@
     </style>
 </head>
 <body>
-    
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
@@ -126,33 +125,26 @@
         <h1>Bem-vindo ao site P.S.T - PROTEÇÃO E SAÚDE NO TRABALHO</h1>
         <h2>Bem-Vindo!</h2>
         <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro, saudável e dentro das normas.</p>
-    </header>
-
-    <!-- Seção de Últimas Publicações -->
-    <section class="publicacoes">
-        <h2>📢 Fique por dentro das novidades!</h2>
-        <div class="publicacao">
-            <a href="publicacoes.html">
-                <img src="https://raw.githubusercontent.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/main/imagens/abril-verde.jpg" alt="Campanha Abril Verde">
+        
+        <!-- Botão Instagram + Imagem -->
+        <div class="insta-container">
+            <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Siga no Instagram">
+            <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank">
+                <i class="fab fa-instagram"></i> Siga no Instagram
             </a>
-            <h3>Abril Verde: A Importância da Conscientização em Segurança do Trabalho</h3>
-            <p>O mês de abril é marcado por uma campanha fundamental para a prevenção de acidentes e doenças ocupacionais: o <strong>Abril Verde</strong>. Essa iniciativa tem como objetivo conscientizar trabalhadores, empresas e a sociedade sobre a necessidade de garantir ambientes de trabalho seguros e saudáveis.</p>
-            <a href="publicacoes.html" class="btn-leia-mais">Saiba mais</a>
         </div>
-    </section>
 
-    <!-- Botão do WhatsApp -->
-    <div class="content">
-        <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
-    </div>
+        <!-- Botão Últimas Publicações -->
+        <a class="btn-publicacoes" href="publicacoes.html">Últimas Publicações</a>
 
-    <!-- Vídeo introdutório -->
-    <div class="content">
-        <h2>Assista ao vídeo introdutório:</h2>
+        <p>Assista ao vídeo introdutório:</p>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
         </div>
-    </div>
+        
+        <br>
+        <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
+    </header>
 
     <footer>
         <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
