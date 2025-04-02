@@ -151,30 +151,34 @@
 
     <!-- Script para envio do formulário -->
     <script>
-        document.getElementById("contatoForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
+    <!-- Script para envio do formulário -->
+<script>
+    document.getElementById("contatoForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
 
-    const form = e.target;
-    const dados = new FormData(form); // FormData pode contornar o problema de CORS
+        const form = e.target;
+        const dados = new FormData(form);
 
-    try {
-        const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
-            method: "POST",
-            body: dados // Envia sem definir manualmente o Content-Type
-        });
+        try {
+            const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(Object.fromEntries(dados.entries()))
+            });
 
-        if (resposta.ok) {
-            form.reset();
-            document.getElementById("mensagemConfirmacao").style.display = "block";
-        } else {
-            alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+            if (resposta.ok) {
+                form.reset();
+                document.getElementById("mensagemConfirmacao").style.display = "block";
+            } else {
+                alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
+            }
+        } catch (error) {
+            console.error("Erro:", error);
+            alert("Ocorreu um erro ao enviar sua mensagem.");
         }
-    } catch (error) {
-        console.error("Erro:", error);
-        alert("Ocorreu um erro ao enviar sua mensagem.");
-    }
-});
-
+    });
     </script>
 
 </body>
