@@ -31,7 +31,7 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
+            margin: 0 15px;
             font-size: 18px;
         }
         nav a i {
@@ -46,9 +46,9 @@
             margin-top: 20px;
         }
         iframe {
-            width: 80%; /* Ajusta a largura do vídeo */
-            max-width: 800px; /* Limita a largura máxima */
-            height: 450px; /* Ajuste a altura do vídeo */
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
         }
         .btn-whatsapp {
             display: inline-block;
@@ -69,28 +69,39 @@
             padding: 10px;
             margin-top: 30px;
         }
-        form {
-            max-width: 400px;
+        .publicacoes {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+        .publicacao {
+            max-width: 600px;
             margin: 20px auto;
             padding: 20px;
-            background: white;
+            background: #e3f2fd;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
-        input, textarea {
-            width: 100%;
-            margin-bottom: 10px;
-            padding: 8px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        .publicacao h3 {
+            color: #00796b;
         }
-        button {
+        .publicacao p {
+            color: #333;
+        }
+        .btn-leia-mais {
+            display: inline-block;
             background-color: #00796b;
             color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            border-radius: 4px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        .btn-leia-mais:hover {
+            background-color: #005a4f;
         }
     </style>
 </head>
@@ -100,12 +111,13 @@
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
         <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
         <a href="normas.html"><i class="fas fa-gavel"></i> Normas Regulamentadoras</a>
-    <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
+        <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
+        <a href="publicacoes.html"><i class="fas fa-newspaper"></i> Publicações</a>
     </nav>
+
     <header>
         <h1>Segurança do Trabalho com Eliézer</h1>
         <p>Orientação e segurança para empresas e trabalhadores</p>
-        <h1>Bem-vindo ao site P.S.T - PROTEÇÃO E SAÚDE NO TRABALHO</h1>
         <h2>Bem-Vindo!</h2>
         <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro, saudável e dentro das normas.</p>
         <p>Assista ao vídeo introdutório:</p>
@@ -115,5 +127,23 @@
         <br>
         <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">Fale comigo no WhatsApp</a>
     </header>
+
+    <section class="publicacoes">
+        <h2>Últimas Publicações</h2>
+        <div class="publicacao">
+            <h3>Como evitar acidentes no trabalho</h3>
+            <p>Aprenda medidas preventivas para reduzir acidentes e garantir um ambiente seguro.</p>
+            <a class="btn-leia-mais" href="publicacoes.html">Leia mais</a>
+        </div>
+        <div class="publicacao">
+            <h3>Importância do uso correto de EPIs</h3>
+            <p>Veja como os Equipamentos de Proteção Individual podem salvar vidas e evitar problemas legais.</p>
+            <a class="btn-leia-mais" href="publicacoes.html">Leia mais</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
+    </footer>
 </body>
 </html>
