@@ -151,31 +151,32 @@
 
     <!-- Script para envio do formulário -->
     <script>
-    <!-- Script para envio do formulário -->
-<script>
     document.getElementById("contatoForm").addEventListener("submit", async function (e) {
         e.preventDefault();
 
         const form = e.target;
         const dados = new FormData(form);
 
+        console.log("Dados do formulário:", Object.fromEntries(dados.entries()));
+
         try {
             const resposta = await fetch("https://hooks.zapier.com/hooks/catch/22272966/2ctzlmh/", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(Object.fromEntries(dados.entries()))
+                body: dados
             });
 
+            console.log("Resposta do servidor:", resposta);
+
             if (resposta.ok) {
+                console.log("Mensagem enviada com sucesso!");
                 form.reset();
                 document.getElementById("mensagemConfirmacao").style.display = "block";
             } else {
+                console.error("Erro ao enviar a mensagem. Status:", resposta.status);
                 alert("Erro ao enviar a mensagem. Tente novamente mais tarde.");
             }
         } catch (error) {
-            console.error("Erro:", error);
+            console.error("Erro ao conectar com o servidor:", error);
             alert("Ocorreu um erro ao enviar sua mensagem.");
         }
     });
