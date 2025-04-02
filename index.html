@@ -14,7 +14,7 @@
             background-color: #f4f4f4;
         }
         header {
-            background: url('https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/Inteligencia-Artificial-na-seguranca-do-trabalho.jpg?raw=true') no-repeat center center/cover;
+            background: url('https://raw.githubusercontent.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/refs/heads/main/imagens/istockphoto-1732837512-2048x2048.webp') no-repeat center center/cover;
             color: white;
             text-align: center;
             padding: 50px;
@@ -37,11 +37,33 @@
         nav a i {
             margin-right: 8px;
         }
-        .container {
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .novidades-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: #00796b;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+        .novidades-container i {
+            margin-right: 10px;
+            font-size: 30px;
+        }
+        .publicacao-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
             padding: 20px;
+            text-align: left;
         }
         .insta-container {
             text-align: center;
@@ -50,70 +72,54 @@
         .insta-container img {
             width: 100%;
             max-width: 300px;
+            height: auto;
             border-radius: 10px;
         }
-        .btn-instagram, .btn-whatsapp {
+        .btn-instagram {
             display: block;
-            width: 70%;
+            background-color: #E1306C;
+            color: white;
             padding: 10px;
             border-radius: 5px;
-            text-align: center;
+            text-decoration: none;
             font-weight: bold;
             font-size: 16px;
             margin: 10px auto;
-            text-decoration: none;
-        }
-        .btn-instagram {
-            background-color: #E4405F;
-            color: white;
+            width: 70%;
         }
         .btn-instagram:hover {
             background-color: #C13584;
         }
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
+        .publicacao-texto {
+            max-width: 50%;
         }
-        .btn-whatsapp:hover {
-            background-color: #128c7e;
+        .publicacao-texto h2 {
+            font-size: 22px;
         }
-        .news-container {
-            width: 50%;
+        .publicacao-texto p {
+            font-size: 16px;
         }
-        .news-title {
-            font-size: 28px;
-            font-weight: bold;
-            text-align: center;
-            background-color: #00796b;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .news-title i {
-            margin-right: 10px;
-            font-size: 30px;
-        }
-        .news-content {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .btn-read-more {
+        .btn-publicacoes {
             display: inline-block;
             background-color: #00796b;
             color: white;
-            padding: 10px;
+            padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
+            font-size: 16px;
             margin-top: 10px;
-            font-weight: bold;
         }
-        .btn-read-more:hover {
-            background-color: #005f56;
+        .btn-publicacoes:hover {
+            background-color: #004d40;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 80%;
+            max-width: 800px;
+            height: 450px;
         }
         footer {
             background-color: #263238;
@@ -125,8 +131,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Menu de navegação -->
     <nav>
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
@@ -136,39 +140,43 @@
         <a href="publicacoes.html"><i class="fas fa-newspaper"></i> Publicações</a>
     </nav>
 
-    <!-- Cabeçalho -->
     <header>
         <h1>Segurança do Trabalho com Eliézer</h1>
         <p>Orientação e segurança para empresas e trabalhadores</p>
+        <h1>Bem-vindo ao site P.S.T - PROTEÇÃO E SAÚDE NO TRABALHO</h1>
+        <h2>Bem-Vindo!</h2>
+        <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro, saudável e dentro das normas.</p>
     </header>
 
-    <!-- Seção de Publicações e Instagram -->
-    <div class="container">
-        <!-- Imagem e Botões Instagram/WhatsApp -->
+    <!-- Título Chamativo -->
+    <div class="novidades-container">
+        <i class="fas fa-bullhorn"></i> Fique por dentro das novidades!
+    </div>
+
+    <!-- Seção de Publicação -->
+    <div class="publicacao-container">
+        <!-- Imagem do Instagram -->
         <div class="insta-container">
             <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Siga no Instagram">
             <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank">
                 <i class="fab fa-instagram"></i> Siga no Instagram
             </a>
-            <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">
-                <i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp
-            </a>
         </div>
 
-        <!-- Últimas Publicações -->
-        <div class="news-container">
-            <div class="news-title">
-                <i class="fas fa-bullhorn"></i> Fique por dentro das novidades!
-            </div>
-            <div class="news-content">
-                <h3>Abril Verde: A Importância da Conscientização em Segurança do Trabalho</h3>
-                <p>O mês de abril é marcado pela campanha Abril Verde, que busca conscientizar sobre a prevenção de acidentes e doenças ocupacionais...</p>
-                <a class="btn-read-more" href="publicacoes.html">Saiba mais</a>
-            </div>
+        <!-- Publicação Abril Verde -->
+        <div class="publicacao-texto">
+            <h2>Abril Verde: Conscientização em Segurança do Trabalho</h2>
+            <p>O mês de abril é dedicado à prevenção de acidentes e doenças ocupacionais. Descubra como a campanha Abril Verde pode contribuir para um ambiente de trabalho mais seguro.</p>
+            <a class="btn-publicacoes" href="publicacoes.html">Saiba mais</a>
         </div>
     </div>
 
-    <!-- Rodapé -->
+    <!-- Vídeo -->
+    <div class="video-container">
+        <p>Assista ao vídeo introdutório:</p>
+        <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
     <footer>
         <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
     </footer>
