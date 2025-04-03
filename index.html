@@ -3,117 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Orientações práticas e educativas sobre segurança do trabalho.">
-    <title>SEGTECH - Tecnologia e Segurança Conectadas</title>
+    <meta name="description" content="Orientações práticas e educativas sobre segurança do trabalho com Eliézer.">
+    <title>Segurança do Trabalho com Eliézer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
-            display: flex;
+            margin: 0;
+            padding: 0;
             background-color: #f4f4f4;
+            display: flex;
         }
-        /* Barra lateral fixa */
-        nav {
+
+        /* Estilo da barra lateral */
+        .sidebar {
             width: 250px;
             height: 100vh;
-            background-color: #004466;
+            background-color: #004d80;
             color: white;
-            position: fixed;
-            left: 0;
-            top: 0;
             padding-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        nav a {
+
+        .sidebar a {
             color: white;
             text-decoration: none;
-            font-size: 18px;
-            margin: 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            display: block;
+            padding: 15px;
             width: 100%;
-            padding: 10px;
             text-align: center;
+            font-size: 18px;
         }
-        nav a:hover {
-            background-color: #003355;
-            border-radius: 5px;
+
+        .sidebar a:hover {
+            background-color: #003366;
         }
+
         .content {
-            margin-left: 270px;
+            margin-left: 260px;
             padding: 20px;
-            width: calc(100% - 270px);
+            flex: 1;
         }
-        /* Cabeçalho */
+
         header {
-            background: url('https://github.com/eliezer-seg/SEGTECH/blob/main/imagens/d1293d56-f57d-4fcf-be02-37def71e3a24.jpg?raw=true') no-repeat center/cover;
+            background: url('https://github.com/eliezer-seg/SEGTECH/blob/main/imagens/d1293d56-f57d-4fcf-be02-37def71e3a24.jpg?raw=true') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 60px;
-            font-size: 22px;
+            padding: 50px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
         }
-        /* Caixa de informação moderna */
+
+        /* Caixa estilizada */
         .info-box {
-            background: linear-gradient(135deg, #004466, #006699);
+            background-color: #004d80;
             color: white;
             padding: 20px;
-            margin: 30px auto;
             text-align: center;
-            width: 80%;
-            max-width: 800px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
         }
+
         /* Seção de novidades */
         .novidades-container {
             text-align: center;
             margin: 40px 0;
             padding: 20px;
-            background-color: #004466;
+            background-color: #00796b;
             color: white;
             font-size: 24px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border-radius: 10px;
         }
+
         .novidades-container i {
             margin-right: 10px;
             font-size: 30px;
         }
-        /* Publicações */
+
+        /* Seção de Publicação */
         .publicacao-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            flex-wrap: wrap;
             padding: 20px;
             text-align: left;
         }
+
         .insta-container {
             text-align: center;
             width: 40%;
-            min-width: 300px;
         }
+
         .insta-container img {
             width: 100%;
             max-width: 300px;
             height: auto;
             border-radius: 10px;
         }
+
         .btn-instagram, .btn-whatsapp {
             display: block;
             color: white;
@@ -126,31 +122,38 @@
             width: 70%;
             text-align: center;
         }
+
         .btn-instagram {
             background-color: #E1306C;
         }
+
         .btn-instagram:hover {
             background-color: #C13584;
         }
+
         .btn-whatsapp {
             background-color: #25d366;
         }
+
         .btn-whatsapp:hover {
             background-color: #128c7e;
         }
+
         .publicacao-texto {
             max-width: 50%;
-            min-width: 300px;
         }
+
         .publicacao-texto h2 {
             font-size: 22px;
         }
+
         .publicacao-texto p {
             font-size: 16px;
         }
+
         .btn-publicacoes {
             display: inline-block;
-            background-color: #004466;
+            background-color: #00796b;
             color: white;
             padding: 10px 20px;
             border-radius: 5px;
@@ -158,19 +161,23 @@
             font-size: 16px;
             margin-top: 10px;
         }
+
         .btn-publicacoes:hover {
-            background-color: #002a3a;
+            background-color: #004d40;
         }
+
         /* Vídeo */
         .video-container {
             text-align: center;
             margin-top: 20px;
         }
+
         iframe {
             width: 80%;
             max-width: 800px;
             height: 450px;
         }
+
         /* Rodapé */
         footer {
             background-color: #263238;
@@ -179,35 +186,36 @@
             padding: 10px;
             margin-top: 30px;
         }
+
     </style>
 </head>
 <body>
 
-    <!-- Barra lateral -->
-    <nav>
+    <!-- Barra Lateral -->
+    <div class="sidebar">
         <a href="index.html"><i class="fas fa-home"></i> Início</a>
         <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
         <a href="contato.html"><i class="fas fa-phone-alt"></i> Contato</a>
         <a href="normas.html"><i class="fas fa-gavel"></i> Normas Regulamentadoras</a>
         <a href="documentos.html"><i class="fas fa-file-alt"></i> Documentos Essenciais</a>
         <a href="publicacoes.html"><i class="fas fa-newspaper"></i> Publicações</a>
-    </nav>
+    </div>
 
+    <!-- Conteúdo Principal -->
     <div class="content">
-        <!-- Cabeçalho -->
+        
         <header>
-            <h1>Bem-vindo ao site SEGTECH - Tecnologia e Segurança Conectadas</h1>
+            <h1>Bem-vindo ao site SEGTECH - TECNOLOGIA E SEGURANÇA CONECTADAS</h1>
             <h2>Segurança é o caminho para o crescimento!</h2>
-            <p>Ofereço orientações práticas e educativas para ajudar empresas e trabalhadores a garantir um ambiente de trabalho mais seguro.</p>
         </header>
 
-        <!-- Caixa estilizada -->
+        <!-- Caixa de Texto Estilizada -->
         <div class="info-box">
             <p>Segurança do Trabalho com Eliézer</p>
             <p>Orientação para empresas e trabalhadores</p>
         </div>
 
-        <!-- Seção de novidades -->
+        <!-- Título Chamativo -->
         <div class="novidades-container">
             <i class="fas fa-bullhorn"></i> Fique por dentro das novidades!
         </div>
@@ -215,18 +223,26 @@
         <!-- Seção de Publicação -->
         <div class="publicacao-container">
             <div class="insta-container">
-                <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Instagram">
-                <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank"><i class="fab fa-instagram"></i> Siga no Instagram</a>
-                <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank"><i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp</a>
-            </div>
-            <div class="publicacao-texto">
-                <h2>Abril Verde: Conscientização em Segurança do Trabalho</h2>
-                <p>Descubra como a campanha Abril Verde pode contribuir para um ambiente de trabalho mais seguro.</p>
-                <a class="btn-publicacoes" href="publicacoes.html">Saiba mais</a>
+                <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Siga no Instagram">
+                <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank">
+                    <i class="fab fa-instagram"></i> Siga no Instagram
+                </a>
+                <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp
+                </a>
             </div>
         </div>
 
-        <footer><p>&copy; 2025 SEGTECH</p></footer>
+        <!-- Vídeo -->
+        <div class="video-container">
+            <p>Assista ao vídeo introdutório:</p>
+            <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Segurança do Trabalho com Eliézer</p>
+        </footer>
+
     </div>
 
 </body>
