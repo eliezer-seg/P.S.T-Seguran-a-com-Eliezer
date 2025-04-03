@@ -15,7 +15,7 @@
             display: flex;
         }
 
-        /* Estilo da barra lateral */
+        /* Barra lateral */
         .sidebar {
             width: 250px;
             height: 100vh;
@@ -50,6 +50,7 @@
             flex: 1;
         }
 
+        /* Estilo do cabeçalho */
         header {
             background: url('https://github.com/eliezer-seg/SEGTECH/blob/main/imagens/d1293d56-f57d-4fcf-be02-37def71e3a24.jpg?raw=true') no-repeat center center/cover;
             color: white;
@@ -92,20 +93,19 @@
         /* Seção de Publicação */
         .publicacao-container {
             display: flex;
-            justify-content: space-around;
+            flex-direction: column;
             align-items: center;
             padding: 20px;
-            text-align: left;
+            text-align: center;
         }
 
         .insta-container {
-            text-align: center;
-            width: 40%;
+            width: 100%;
+            max-width: 500px;
         }
 
         .insta-container img {
             width: 100%;
-            max-width: 300px;
             height: auto;
             border-radius: 10px;
         }
@@ -140,7 +140,9 @@
         }
 
         .publicacao-texto {
-            max-width: 50%;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
         }
 
         .publicacao-texto h2 {
