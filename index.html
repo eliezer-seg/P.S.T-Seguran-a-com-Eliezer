@@ -17,7 +17,7 @@
             display: flex;
             background-color: #f4f4f4;
         }
-        /* Barra de navegação lateral */
+        /* Barra lateral fixa */
         nav {
             width: 250px;
             height: 100vh;
@@ -39,16 +39,20 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
         }
-        nav a i {
-            font-size: 20px;
+        nav a:hover {
+            background-color: #003355;
+            border-radius: 5px;
         }
         .content {
             margin-left: 270px;
             padding: 20px;
-            width: 100%;
+            width: calc(100% - 270px);
         }
-        /* Estilização do cabeçalho */
+        /* Cabeçalho */
         header {
             background: url('https://github.com/eliezer-seg/SEGTECH/blob/main/imagens/d1293d56-f57d-4fcf-be02-37def71e3a24.jpg?raw=true') no-repeat center/cover;
             color: white;
@@ -58,7 +62,7 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             border-radius: 10px;
         }
-        /* Caixa estilizada */
+        /* Caixa de informação moderna */
         .info-box {
             background: linear-gradient(135deg, #004466, #006699);
             color: white;
@@ -90,17 +94,19 @@
             margin-right: 10px;
             font-size: 30px;
         }
-        /* Seção de publicações */
+        /* Publicações */
         .publicacao-container {
             display: flex;
             justify-content: space-around;
             align-items: center;
+            flex-wrap: wrap;
             padding: 20px;
             text-align: left;
         }
         .insta-container {
             text-align: center;
             width: 40%;
+            min-width: 300px;
         }
         .insta-container img {
             width: 100%;
@@ -134,6 +140,7 @@
         }
         .publicacao-texto {
             max-width: 50%;
+            min-width: 300px;
         }
         .publicacao-texto h2 {
             font-size: 22px;
@@ -205,15 +212,21 @@
             <i class="fas fa-bullhorn"></i> Fique por dentro das novidades!
         </div>
 
-        <!-- Seção de vídeo -->
-        <div class="video-container">
-            <p>Assista ao vídeo introdutório:</p>
-            <iframe src="https://www.youtube.com/embed/t4JcQPDQ7bM" frameborder="0" allowfullscreen></iframe>
+        <!-- Seção de Publicação -->
+        <div class="publicacao-container">
+            <div class="insta-container">
+                <img src="https://github.com/eliezer-seg/P.S.T-Seguran-a-com-Eliezer/blob/main/imagens/739c9856-f8c8-486d-81e7-675abcfa1f01.jpg?raw=true" alt="Instagram">
+                <a class="btn-instagram" href="https://www.instagram.com/segurancadotrabalhocomeliezer/" target="_blank"><i class="fab fa-instagram"></i> Siga no Instagram</a>
+                <a class="btn-whatsapp" href="https://wa.me/5541998858826" target="_blank"><i class="fab fa-whatsapp"></i> Fale comigo no WhatsApp</a>
+            </div>
+            <div class="publicacao-texto">
+                <h2>Abril Verde: Conscientização em Segurança do Trabalho</h2>
+                <p>Descubra como a campanha Abril Verde pode contribuir para um ambiente de trabalho mais seguro.</p>
+                <a class="btn-publicacoes" href="publicacoes.html">Saiba mais</a>
+            </div>
         </div>
 
-        <footer>
-            <p>&copy; 2025 SEGTECH - Tecnologia e Segurança Conectadas</p>
-        </footer>
+        <footer><p>&copy; 2025 SEGTECH</p></footer>
     </div>
 
 </body>
